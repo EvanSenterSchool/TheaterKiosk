@@ -12,13 +12,19 @@ public class Main {
         if (scan.hasNextInt()) {
 
             personAge = scan.nextInt();
+            if (personAge > 0 && personAge < 120) {
 
-            if (personAge <= 120 && personAge >= wristBand_Min_Age)
-                System.out.println("You get a wristband");
-
-            else {
-                System.out.println("You are not old enough");
+                if (personAge >= wristBand_Min_Age) {
+                    System.out.println("You get a wristband");
+                }
+                else {
+                    System.out.println("You are not old enough");
+                }
             }
+            else
+                System.out.println("You did not enter a valid age");
+
+
         }
         else
             System.out.println("You have entered the wrong data type");
